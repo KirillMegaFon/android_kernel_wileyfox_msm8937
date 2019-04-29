@@ -1153,7 +1153,7 @@ static sector_t f2fs_bmap(struct address_space *mapping, sector_t block)
 	if (f2fs_has_inline_data(inode))
 		return 0;
 
-	return generic_block_bmap(mapping, block, get_data_block_bmap);
+	return generic_block_bmap(mapping, block, get_data_block);
 }
 
 const struct address_space_operations f2fs_dblock_aops = {
